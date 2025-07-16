@@ -1,0 +1,220 @@
+/* Variables CSS consistentes */
+:root {
+    --primary-color: #d00000;
+    --secondary-color: #828282;
+    --text-color: #000;
+    --bg-color: #fff;
+    --card-bg: #f8f8f8;
+    --hover-color: #b00000;
+    --font-main: "Inter", sans-serif;
+    --font-title: "Karma", serif;
+    --border-radius: 0.5em;
+    --box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* Toolbar de navegación */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 0.8em 2em;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    margin-bottom: 2em;
+  }
+  
+  .menu.toolbar {
+    background-color: white;
+    color: var(--primary-color);
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: var(--border-radius);
+    font-family: var(--font-main);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+  }
+  
+  .menu.toolbar a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .menu.toolbar:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-0.1em);
+  }
+  
+  .menu.toolbar:hover a {
+    color: white;
+  }
+  
+  .main-header h1 {
+    font-family: var(--font-title);
+    color: white;
+    font-size: 1.8em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-nav a {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-weight: 500;
+    padding: 0.5em 0.8em;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  .main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Contenedor de productos */
+  .container:last-child {
+    padding: 0 2em 2em;
+  }
+  
+  /* Grid de productos */
+  .product {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    padding: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  
+  .product:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Imagen del producto */
+  .product .img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1em;
+  }
+  
+  /* Información del producto */
+  .product h4 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    color: var(--text-color);
+    line-height: 1.4;
+  }
+  
+  .product h4:nth-child(2) { /* Marca */
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--primary-color);
+  }
+  
+  .product h4:nth-child(3) { /* Modelo */
+    font-weight: 600;
+  }
+  
+  .product h4:nth-child(5) { /* Precio */
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: 0.5em;
+    font-size: 1.2em;
+  }
+  
+  /* Versión desktop - Grid de 3 columnas */
+  @media (min-width: 768px) {
+    .container:last-child {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5em;
+    }
+    
+    .product {
+      margin-bottom: 0;
+    }
+  }
+  
+  /* Versión tablet - Grid de 2 columnas */
+  @media (max-width: 1024px) and (min-width: 481px) {
+    .container:last-child {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Versión móvil */
+  @media (max-width: 480px) {
+    .main-header {
+      flex-direction: column;
+      padding: 1em;
+      gap: 1em;
+    }
+    
+    .main-header h1 {
+      position: static;
+      transform: none;
+      order: -1;
+      text-align: center;
+      width: 100%;
+    }
+    
+    .main-nav ul {
+      flex-direction: column;
+      width: 100%;
+      gap: 0.5em;
+    }
+    
+    .main-nav a {
+      display: block;
+      text-align: center;
+      padding: 0.8em;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .menu.toolbar {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .container:last-child {
+      padding: 0 1em 1em;
+    }
+  }

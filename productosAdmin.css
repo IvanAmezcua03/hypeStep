@@ -1,0 +1,296 @@
+
+/* Variables CSS consistentes */
+:root {
+  --primary-color: #d00000;
+  --secondary-color: #828282;
+  --text-color: #000;
+  --bg-color: #fff;
+  --table-header-bg: #f0f0f0;
+  --table-row-even: #f8f8f8;
+  --table-row-hover: #f0f0f0;
+  --hover-color: #b00000;
+  --font-main: "Inter", sans-serif;
+  --font-title: "Karma", serif;
+  --border-radius: 0.5em;
+  --box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 0;
+}
+
+/* Estructura principal */
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Toolbar de navegación */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 0.8em 2em;
+  box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+.menu.toolbar {
+  background-color: white;
+  color: var(--primary-color);
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: var(--border-radius);
+  font-family: var(--font-main);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.menu.toolbar a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.menu.toolbar:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-0.1em);
+}
+
+.menu.toolbar:hover a {
+  color: white;
+}
+
+.main-header h1 {
+  font-family: var(--font-title);
+  color: white;
+  font-size: 1.8em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-main);
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-size: 1em;
+}
+
+.main-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Contenido de la tabla */
+.table-container {
+  padding: 2em;
+}
+
+/* Estilos para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2% 0;
+  font-size: min(3.5vw, 1em);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+thead {
+  background-color: #b00000;
+}
+
+th, td {
+  padding: 1.5% 1%;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: min(3.8vw, 0.9em);
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-row-even);
+}
+
+tr:hover {
+  background-color: var(--table-row-hover);
+}
+
+/* Imágenes en la tabla */
+.img {
+  max-width: 5em;
+  height: auto;
+  border-radius: 0.3em;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  /* Toolbar móvil */
+  .main-header {
+    flex-direction: column;
+    padding: 1em;
+    gap: 1em;
+  }
+  
+  .main-header h1 {
+    position: static;
+    transform: none;
+    order: -1;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5em;
+  }
+  
+  .main-nav a {
+    display: block;
+    text-align: center;
+    padding: 0.8em;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .menu.toolbar {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Tabla móvil */
+  table {
+    display: block;
+    width: 100%;
+  }
+  
+  thead {
+    display: none;
+  }
+  
+  tr {
+    display: block;
+    margin-bottom: 1.5em;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 3%;
+  }
+  
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5% 3%;
+    border-bottom: 1px solid #eee;
+    font-size: min(4vw, 1em);
+  }
+  
+  td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: 2%;
+    flex: 1;
+  }
+  
+  td:last-child {
+    border-bottom: none;
+  }
+  
+  .img {
+    max-width: 4em;
+  }
+
+  /* Etiquetas para móviles */
+  td:nth-of-type(1):before { content: "Marca: "; }
+  td:nth-of-type(2):before { content: "Modelo: "; }
+  td:nth-of-type(3):before { content: "Talla: "; }
+  td:nth-of-type(4):before { content: "Color: "; }
+  td:nth-of-type(5):before { content: "Precio: "; }
+  td:nth-of-type(6):before { content: "Disponibles: "; }
+  td:nth-of-type(7):before { content: "Imagen: "; }
+  td:nth-of-type(8):before { content: "Descripción: "; }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-header {
+    padding: 0.8em 1em;
+  }
+  
+  .main-nav ul {
+    gap: 0.8em;
+  }
+  
+  .main-header h1 {
+    font-size: 1.5em;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+  
+  .img {
+    max-width: 4em;
+  }
+}
+
+/* Estilos específicos para la bitácora */
+
+.btnEliminar{
+  color: white;
+  padding: 10px;
+  background-color: #d00000;
+  border: none;
+  border-radius: 5%;
+}
+
+.btnModificar{
+  color: white;
+  padding: 10px;
+  background-color: #718907;
+  border: none;
+  border-radius: 5%;
+}
+/* HTML necesario para el modo móvil (debes añadir data-label a cada td) */
+/* Ejemplo: <td data-label="Marca"><?php echo $row['marca']; ?></td> */

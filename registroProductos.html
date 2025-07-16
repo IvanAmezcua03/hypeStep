@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Productos</title>
+    <link rel="stylesheet" href="registroProductos.css">
+    
+</head>
+<body>
+    <h1>Registro de productos</h1>
+    <section>
+        <div>
+            <form action="registroProductos.php" method="POST">
+                <label for="marca">Marca:</label>
+                <input type="text" name="marca" id="marca" required>
+                <label for="modelo">Modelo:</label>
+                <input type="text" name="modelo" id="modelo" required>
+                <label for="talla">Talla:</label>
+                <input type="text" name="talla" id="talla" required>
+                <label for="colorway">Colorway:</label>
+                <input type="text" name="colorway" id="colorway" required>
+                <label for="precio">Precio:</label>
+                <input type="text" name="precio" id="precio" required>
+                <label for="disponibilidad">Disponibilidad:</label>
+                <input type="text" name="disponibilidad" id="disponibilidad" required>
+                <label for="imagen">Imagen:</label>
+                <input type="text" name="img" id="img" required>
+                <label for="descripcion">Descripción:</label>
+                <input type="text" name="descripcion" id="descripcion" required>
+                <button type="submit" name="register" value="register">Registrar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

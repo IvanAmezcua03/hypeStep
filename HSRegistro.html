@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Hype-Step</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 90%; /* Cambiado de 1600px a porcentaje */
+            margin: auto;
+            background: white;
+            padding: 8%; /* Aproximadamente 130px en relación a 1600px */
+        }
+        .header {
+            background-color: red;
+            padding: 1%; /* Aproximado de 15px */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-link {
+        display: inline-block; /* Para que funcione correctamente con la imagen */
+        text-decoration: none; /* Elimina el subrayado del enlace */
+        }
+
+        .logo-link:hover {
+            opacity: 0.8; /* Efecto hover sutil */
+            transition: opacity 0.3s ease; /* Transición suave */
+        }
+        .logo {
+            width: 40%; /* Cambiado de px a porcentaje */
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .menu {
+            font-size: 1.5em; /* Cambiado de px a em */
+            color: black;
+        }
+        .form-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25%; /* 20px/1600px */
+        }
+        .form {
+            width: 50%;
+        }
+        .form h2 {
+            font-style: italic;
+            background: lightgray;
+            display: inline-block;
+            padding: 0.625%; /* 10px/1600px */
+            border-radius: 0.625%; /* 10px/1600px */
+        }
+        .form input {
+            width: 100%;
+            padding: 0.625%; /* 10px/1600px */
+            margin: 0.625% 0; /* 10px/1600px */
+            border-radius: 0.625%; /* 10px/1600px */
+            border: none;
+            background: lightgray;
+        }
+        .form button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 0.625%; /* 10px/1600px */
+            width: 100%;
+            border-radius: 0.625%; /* 10px/1600px */
+            cursor: pointer;
+        }
+        .sneaker-image img {
+            width: 200%;
+            max-width: 60%; /* 500px/1600px */
+            align-content: right;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="HSMain.php" class="logo-link">
+            <img src="imagenes/logoHS.png" alt="Logo" class="logo">
+        </a>
+        <div class="menu">&#9776;</div>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <div class="form">
+                <form method = "POST" action = "HSRegistros.php">
+                    <h2>Registro</h2>  
+                    <img src="imagenes\ImageRegister.png" alt="Registro" class="Registro">
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="text" id="username" name="username" placeholder="Nombre de usuario"required>
+                    <input type="password" id="passwd" name="passwd" placeholder="Contraseña" required>
+                    <input type="text" id="phone" name="phone" placeholder="Número de teléfono" required>
+                    <input type="text" id="addrss" name="addrss" placeholder="Dirección" required>
+                    <button type = "submit" name = "register" value = "register">Completar</button>
+                </form>
+            </div>
+            <div class="sneaker-image">
+                <img src="imagenes\Jordan3.png" alt="Sneakers">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
