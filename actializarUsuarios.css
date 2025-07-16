@@ -1,0 +1,189 @@
+/* Variables CSS (consistentes con tu diseño) */
+:root {
+    --primary-color: #d00000;
+    --secondary-color: #828282;
+    --text-color: #000;
+    --bg-color: #fff;
+    --input-bg: #f0f0f0;
+    --font-main: "Inter", sans-serif;
+    --font-title: "Karma", serif;
+    --border-radius: 0.5em;
+    --box-shadow: 0 0.125em 0.3125em rgba(0, 0, 0, 0.2);
+    --transition: all 0.3s ease;
+    --error-color: #ff3333;
+    --success-color: #28a745;
+  }
+  
+  /* Reset y estilos base (igual que tu referencia) */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2%;
+    min-height: 100vh;
+  }
+  
+  /* Contenedor principal */
+  .update-user-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 3% auto;
+    padding: 3%;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Título del formulario */
+  .update-user-title {
+    font-family: var(--font-title);
+    font-size: min(5vw, 2.2em);
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 5%;
+    letter-spacing: -0.03em;
+  }
+  
+  /* Estructura del formulario */
+  .update-user-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3%;
+  }
+  
+  /* Grupos de campos del formulario */
+  .form-group {
+    margin-bottom: 4%;
+  }
+  
+  /* Etiquetas */
+  .form-label {
+    display: block;
+    margin-bottom: 2%;
+    font-weight: 600;
+    font-size: min(4vw, 1em);
+    color: var(--text-color);
+  }
+  
+  /* Campos de entrada */
+  .form-input {
+    width: 100%;
+    padding: 3% 4%;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--input-bg);
+    font-family: var(--font-main);
+    font-size: min(4vw, 1em);
+    transition: var(--transition);
+  }
+  
+  .form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.125em var(--primary-color);
+    background-color: white;
+  }
+  
+  /* Contenedor de botones */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    margin-top: 5%;
+  }
+  
+  /* Botones */
+  .form-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 3% 6%;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: min(4.5vw, 1.1em);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    transition: var(--transition);
+    flex: 1;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    text-decoration: none;
+  }
+  
+  .form-button:hover {
+    background-color: #b00000;
+    transform: translateY(-0.125em);
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Botón secundario */
+  .button-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .button-secondary:hover {
+    background-color: #6d6d6d;
+  }
+  
+  /* Mensajes de estado */
+  .form-message {
+    padding: 2%;
+    margin-bottom: 4%;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .error-message {
+    background-color: rgba(255, 51, 51, 0.1);
+    color: var(--error-color);
+  }
+  
+  .success-message {
+    background-color: rgba(40, 167, 69, 0.1);
+    color: var(--success-color);
+  }
+  
+  /* Responsive para tablets */
+  @media (min-width: 48em) { /* ~768px */
+    .update-user-form {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Campos que deben ocupar ancho completo */
+    .form-group-full {
+      grid-column: span 2;
+    }
+    
+    .form-actions {
+      grid-column: span 2;
+    }
+    
+    .form-input {
+      padding: 2% 3%;
+    }
+  }
+  
+  /* Responsive para desktop */
+  @media (min-width: 75em) { /* ~1200px */
+    .update-user-container {
+      width: 70%;
+      padding: 2%;
+    }
+    
+    .update-user-form {
+      gap: 2%;
+    }
+  }

@@ -1,0 +1,460 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family:
+      "Inter",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+  }
+  
+  /* Login page container */
+  .login-page {
+    background-color: rgba(255, 255, 255, 1);
+    padding-bottom: 184px;
+    overflow: hidden;
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: rgba(208, 0, 0, 1);
+    display: flex;
+    width: 100%;
+    padding-right: 27px;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .logo-main {
+    aspect-ratio: 1.08;
+    object-fit: contain;
+    object-position: center;
+    width: 143px;
+    border-radius: 53px;
+    flex-shrink: 0;
+    max-width: 100%;
+  }
+  
+  .logo-secondary {
+    aspect-ratio: 1.21;
+    object-fit: contain;
+    object-position: center;
+    width: 93px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-shrink: 0;
+  }
+  
+  /* Main login container */
+  .login-container {
+    display: flex;
+    margin-top: 12px;
+    margin-left: 41px;
+    width: 100%;
+    max-width: 1248px;
+    flex-direction: column;
+  }
+  
+  .welcome-logo {
+    aspect-ratio: 1.12;
+    object-fit: contain;
+    object-position: center;
+    width: 244px;
+    align-self: center;
+    margin-left: 42px;
+    max-width: 100%;
+  }
+  
+  .welcome-message {
+    border-radius: 100px;
+    background-color: rgba(217, 217, 217, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-self: flex-end;
+    margin-top: 12px;
+    padding: 28px 70px;
+    font-family:
+      "Kaushan Script",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 64px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  /* Form styles */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .form-group {
+    width: 100%;
+    max-width: 1111px;
+  }
+  
+  .username-group {
+    margin-top: 200px;
+  }
+  
+  .password-group {
+    margin-top: 199px;
+  }
+  
+  .form-group-content {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .form-label {
+    color: rgba(0, 0, 0, 1);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 72px;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: stretch;
+  }
+  
+  .input-container {
+    border-radius: 50px;
+    background-color: rgba(217, 217, 217, 1);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 187px;
+  }
+  
+  .password-group .input-container {
+    height: 208px;
+  }
+  
+  .form-input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    border-radius: 50px;
+    padding: 0 30px;
+    font-size: 24px;
+    outline: none;
+  }
+  
+  .login-button {
+    align-self: center;
+    width: 359px;
+    border-radius: 8px;
+    background-color: rgba(165, 0, 0, 1);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
+    margin-top: 174px;
+    margin-left: 45px;
+    min-height: 91px;
+    max-width: 100%;
+    padding: 32px 24px;
+    border: none;
+    cursor: pointer;
+    font-family:
+      "Inter",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 36px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 800;
+    text-align: center;
+  }
+  
+  /* Footer styles */
+  .login-footer {
+    display: flex;
+    margin-top: 98px;
+    width: 100%;
+    padding-left: 72px;
+    padding-right: 29px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .social-login-options {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 40px 100px;
+    flex-wrap: wrap;
+  }
+  
+  .social-login-button {
+    border: none;
+    cursor: pointer;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    padding: 0;
+    background: transparent;
+  }
+  
+  .google-button {
+    border-radius: 40px;
+    background-color: rgba(202, 202, 202, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 1px;
+    padding-right: 1px;
+  }
+  
+  .apple-button {
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 8px 28px;
+  }
+  
+  .social-button-content {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .social-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 21%;
+  }
+  
+  .apple-button .social-icon-container {
+    width: 20%;
+  }
+  
+  .social-icon {
+    object-fit: contain;
+    object-position: center;
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+  
+  .google-icon {
+    aspect-ratio: 0.95;
+    width: 98px;
+    border-radius: 40px;
+  }
+  
+  .apple-icon {
+    aspect-ratio: 0.99;
+    width: 85px;
+    border-radius: 30px;
+  }
+  
+  .social-button-text {
+    color: rgba(0, 0, 0, 1);
+    font-size: 32px;
+    font-weight: 800;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-self: stretch;
+    width: 79%;
+    margin-left: 20px;
+  }
+  
+  .apple-text {
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    width: 80%;
+  }
+  
+  .divider-text {
+    color: rgba(0, 0, 0, 1);
+    font-size: 64px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 12px;
+  }
+  
+  .register-prompt {
+    color: rgba(0, 0, 0, 1);
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 72px;
+    text-align: center;
+    align-self: center;
+    margin-top: 239px;
+    margin-left: 16px;
+  }
+  
+  .register-link {
+    text-decoration: underline;
+    color: inherit;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 991px) {
+    .login-page {
+      padding-bottom: 100px;
+    }
+  
+    .header {
+      max-width: 100%;
+      padding-right: 20px;
+    }
+  
+    .login-container {
+      max-width: 100%;
+    }
+  
+    .welcome-message {
+      max-width: 100%;
+      font-size: 40px;
+      padding: 28px 20px;
+    }
+  
+    .username-group {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .password-group {
+      max-width: 100%;
+      margin-top: 40px;
+    }
+  
+    .form-group-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  
+    .form-label {
+      width: 100%;
+      margin-top: 40px;
+      font-size: 40px;
+      line-height: 67px;
+      text-align: center;
+    }
+  
+    .input-container {
+      margin-top: 40px;
+    }
+  
+    .login-button {
+      padding: 32px 20px;
+      margin-top: 40px;
+    }
+  
+    .login-footer {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 40px;
+    }
+  
+    .social-login-options {
+      max-width: 100%;
+    }
+  
+    .google-button {
+      max-width: 100%;
+    }
+  
+    .apple-button {
+      max-width: 100%;
+      padding: 8px 20px;
+    }
+  
+    .social-button-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0px;
+    }
+  
+    .social-icon-container {
+      width: 100%;
+    }
+  
+    .apple-button .social-icon-container {
+      width: 100%;
+    }
+  
+    .google-icon {
+      margin-top: 15px;
+    }
+  
+    .apple-icon {
+      margin-top: 40px;
+    }
+  
+    .social-button-text {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  
+    .apple-button .social-button-text {
+      width: 100%;
+    }
+  
+    .divider-text {
+      font-size: 40px;
+    }
+  
+    .register-prompt {
+      max-width: 100%;
+      margin-top: 40px;
+      font-size: 40px;
+      line-height: 67px;
+    }
+  }
+  
+
+
+
+
+
+
+  /* Estilos adicionales específicos para el carrito */
+        .cart-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .cart-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .btn-checkout {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .btn-clear {
+            background: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .cart-empty {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+        }

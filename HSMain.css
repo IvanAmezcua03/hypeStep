@@ -1,0 +1,360 @@
+/* Variables CSS para consistencia */
+:root {
+  --primary-color: #d00000;
+  --secondary-color: #828282;
+  --text-color: #000;
+  --bg-color: #fff;
+  --font-main: "Inter", sans-serif;
+  --font-title: "Karma", serif;
+  --font-special: "Kavoon", cursive;
+  --font-handwritten: "Kalam", cursive;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+/* Header responsivo */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 clamp(1rem, 3vw, 2rem);
+  height: clamp(80px, 10vh, 133px);
+  background-color: var(--primary-color);
+}
+
+.menu-toggle {
+  display: none;
+  color: #fff;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  width: clamp(60px, 6.5vw, 93px);
+  height: auto;
+  aspect-ratio: 93/77;
+}
+
+.login-container {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.user-icon {
+  width: clamp(60px, 7vw, 100px);
+  height: auto;
+}
+
+.login-text {
+  color: #fff;
+  font-family: var(--font-special);
+  font-size: clamp(1.2rem, 3vw, 2.25rem);
+  text-decoration: underline;
+  padding: clamp(0.5rem, 1vw, 0.625rem) clamp(1rem, 2vw, 1.25rem);
+}
+
+/* Contenido principal */
+.main-content {
+  padding: 0 clamp(1rem, 4vw, 3.5rem);
+}
+
+/* Sección Misión */
+.mission-section {
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.page-title {
+  font-family: var(--font-title);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--text-color);
+  letter-spacing: -0.48px;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+}
+
+.mission-text {
+  font-family: var(--font-handwritten);
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 150%;
+}
+
+/* Logo de marca */
+.brand-logo {
+  width: min(90%, 343px);
+  height: auto;
+  aspect-ratio: 343/319;
+  margin: clamp(1rem, 3vw, 1.5rem) auto;
+  display: block;
+}
+
+/* Sección Ubicación - Versión corregida */
+.location-section {
+  position: relative;
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.map-image {
+  flex: 1;
+  min-width: 300px;
+  width: 100%;
+  max-width: 924px;
+  height: auto;
+  aspect-ratio: 924/490;
+  margin: 0.5rem 0;
+}
+
+.location-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.location-icon {
+  width: clamp(120px, 16vw, 233px);
+  height: auto;
+  aspect-ratio: 233/246;
+}
+
+.location-address {
+  width: 100%;
+  max-width: 353px;
+  font-family: var(--font-main);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--text-color);
+  text-decoration: underline;
+  line-height: 150%;
+  text-align: right;
+}
+
+/* Sección Productos */
+.products-section {
+  margin: clamp(1.5rem, 4vw, 2.5rem) 0;
+}
+
+.products-title {
+  font-family: var(--font-main);
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--text-color);
+  letter-spacing: -0.48px;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.product-price {
+  font-family: var(--font-main);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.product-name {
+  font-family: var(--font-main);
+  font-size: clamp(0.9rem, 1.8vw, 1.5rem);
+  color: var(--secondary-color);
+}
+
+/* Footer */
+.main-footer {
+  margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.5rem, 4vw, 3.25rem) clamp(2rem, 6vw, 5rem);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.footer-title {
+  font-family: var(--font-main);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.social-icons {
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 0.5rem);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+}
+
+.social-icon {
+  width: clamp(30px, 4vw, 52.5px);
+  height: auto;
+  fill: var(--secondary-color);
+  transition: fill 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  fill: var(--primary-color);
+}
+
+/* Media Queries para ajustes específicos */
+@media (max-width: 991px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .login-container {
+    display: none;
+  }
+
+  .location-section {
+    flex-direction: column;
+  }
+  
+  .location-content {
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .location-address {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-header {
+    height: 70px;
+  }
+
+  .page-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .mission-text {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+}
+
+/* Estilo para el botón de ver productos */
+.ver-productos-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+/* Estilo para el botón de ver productos */
+.ver-productos-btn {
+  background-color: #d00000; /* Rojo como el header */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: auto;
+}
+
+/* Efecto hover */
+.ver-productos-btn:hover {
+  background-color: #b00000; /* Rojo más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al hacer clic */
+.ver-productos-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Centrado opcional */
+.productos-section {
+  text-align: center;
+}
+
+.user-name {
+    font-weight: 600;
+    color: white !important; /* Color blanco */
+    margin-right: 10px;
+    font-size: 1.5em !important; /* Tamaño más grande (puedes ajustar este valor) */
+    vertical-align: middle;
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra para mejor legibilidad */
+}

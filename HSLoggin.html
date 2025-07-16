@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Hype-Step</title>
+    <style>
+        :root {
+            --primary-color: red;
+            --secondary-color: lightgray;
+            --text-color: black;
+            --bg-color: #f8f8f8;
+            --container-padding: clamp(2rem, 5vw, 6rem);
+            --element-padding: clamp(0.5rem, 1.5vw, 1.5rem);
+            --border-radius: clamp(0.5rem, 1.5vw, 1rem);
+            --logo-size: clamp(3rem, 10vw, 6rem);
+        }
+    
+        * {
+            box-sizing: border-box;
+        }
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+    
+        .container {
+            width: min(90%, 1600px);
+            margin: auto;
+            background: white;
+            padding: var(--container-padding);
+        }
+    
+        .header {
+            background-color: var(--primary-color);
+            padding: var(--element-padding);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+    
+        .logo {
+            width: var(--logo-size);
+            height: var(--logo-size);
+            border-radius: 50%;
+            object-fit: contain;
+        }
+    
+        .menu {
+            font-size: clamp(1.25rem, 4vw, 1.5rem);
+            color: var(--text-color);
+        }
+    
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: var(--element-padding);
+        }
+    
+        @media (min-width: 768px) {
+            .form-container {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    
+        .form {
+            width: 100%;
+        }
+    
+        @media (min-width: 768px) {
+            .form {
+                width: 50%;
+            }
+        }
+    
+        .form h2 {
+            font-style: italic;
+            background: var(--secondary-color);
+            display: inline-block;
+            padding: var(--element-padding);
+            border-radius: var(--border-radius);
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+        }
+    
+        .form input {
+            width: 100%;
+            padding: var(--element-padding);
+            margin: 0.5rem 0;
+            border-radius: var(--border-radius);
+            border: none;
+            background: var(--secondary-color);
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+    
+        .form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: var(--element-padding);
+            width: 100%;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            transition: opacity 0.3s ease;
+        }
+    
+        .form button:hover {
+            opacity: 0.9;
+        }
+    
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+    
+        .social-login img {
+            width: clamp(2rem, 6vw, 3rem);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+    
+        .social-login img:hover {
+            transform: scale(1.1);
+        }
+    
+        .register-link {
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+    
+        .sneaker-image {
+            display: flex;
+            justify-content: center;
+        }
+    
+        .sneaker-image img {
+            width: 100%;
+            max-width: min(100%, 500px);
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="HSMain.php" class="logo-link">
+            <img src="imagenes/logoHS.png" alt="Logo" class="logo">
+        </a>
+        <div class="menu">&#9776;</div>
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <div class="form">
+                <h2>Bienvenido, por favor llene los campos</h2>
+                    <form action="HSloggin.php" method="POST">
+                        <input type="text" name="username" placeholder="Nombre de usuario" required>
+                        <input type="password" name="passwd" placeholder="Contraseña" required>
+                        <button type="submit">Iniciar sesión</button>
+                    </form>
+                <div class="social-login">
+                    <img src="imagenes/Google.png" alt="Google Login">iniciar sesion con google
+                    <span>Ó</span>
+                    <img src="imagenes/Apple.png" alt="Apple Login">iniciar sesion con apple
+                </div>
+                <div class="register-link">
+                    ¿No tienes una cuenta? <a href="HSRegistro.html">Regístrate ahora mismo</a>
+                </div>
+            </div>
+            <div class="sneaker-image">
+                <img src="imagenes/Jordan3.png" alt="Sneakers">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
